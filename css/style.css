@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-home {
+  animation: spin 2s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  font-family: "Carrois Gothic", sans-serif;
+  overflow-y: auto;
+  background-color: rgb(0, 0, 0);
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  z-index: -1;
+}
+
+.footer-txt {
+  margin: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.logo-web {
+  height: 65px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-size: 200%;
+  background-image: url(../assets/img/fondo-web.png);
+}
+
+.navbar-collapse {
+  width: 100vh;
+  height: 100vh;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.container-fluid {
+  background-color: rgb(0, 0, 0);
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.navbar-nav .nav-link.active {
+  color: #03fa6e;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.bg-body-tertiary {
+  opacity: 2;
+}
+
+.home {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+.home .logo-home {
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(3, 250, 110, 0.8);
+}
+.home .home-txt {
+  color: #03fa6e;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bolder;
+  text-shadow: 2px 2px rgba(3, 250, 110, 0.8);
+  letter-spacing: 1px;
+  position: relative;
+  bottom: 80%;
+}
+
+.titulo {
+  margin-top: 0%;
+  text-transform: uppercase;
+  font-size: 45px;
+  color: #03fa6e;
+  text-align: center;
+}
+
+.sobre-mi {
+  margin: 30px;
+}
+.sobre-mi .descripcion-sobre-mi {
+  margin-top: 5%;
+  font-size: 17px;
+  color: lightgray;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.cont-portafolio {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.cont-portafolio .portafolio-txt {
+  color: #03fa6e;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 60vh;
+  margin-top: 20%;
+}
+.habilidades .div-habilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.habilidades .div-habilidades .logos-habilidades {
+  height: 70px;
+}
+.habilidades .div-habilidades .texto-habilidades {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.contacto {
+  margin: 30px;
+}
+.contacto .formulario {
+  width: 80%;
+  margin: 0 auto;
+}
+.contacto .formulario label {
+  display: block;
+  margin: 8px 0;
+  font-weight: bold;
+  color: #03fa6e;
+}
+.contacto .formulario .inputs-forms {
+  padding: 3px;
+  margin: 8px 0;
+  width: 270px;
+  border: 2px solid #03fa6e;
+  font-size: 16px;
+}
+.contacto .formulario .text-contacto {
+  padding: 6px;
+  margin: 8px 0;
+  width: 270px;
+  height: 50px;
+  border: 2px solid #03fa6e;
+  font-size: 16px;
+}
+.contacto .formulario .boton-forms {
+  background-color: #03fa6e;
+  color: black;
+  padding: 3px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 270px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contacto .redes-sociales {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #03fa6e;
+}
+.contacto .redes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contacto .redes .redes-icon {
+  position: relative;
+  width: 30px;
+  bottom: 20px;
+  margin-top: 15%;
+}
+.contacto .redes .p-redes {
+  margin: 0;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  }
+  footer {
+    position: relative;
+    padding: 1em 0;
+    z-index: -10;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    height: 80px;
+  }
+  .navbar-collapse {
+    height: auto;
+    justify-content: flex-end;
+  }
+  .home {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 40%;
+    grid-template-rows: 70%;
+    min-height: 50vh;
+    text-align: center;
+  }
+  .home .logo-home {
+    height: 300px;
+    border-radius: 50%;
+  }
+  .home .home-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .home-txt {
+    color: #03fa6e;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 3px 3px rgba(3, 250, 110, 0.8);
+    text-align: center;
+  }
+  .titulo {
+    margin-top: 5%;
+    text-align: center;
+  }
+  .sobre-mi {
+    margin-top: 0;
+  }
+  .sobre-mi .descripcion-sobre-mi {
+    margin-top: 10%;
+    font-size: 23px;
+  }
+  .habilidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 60vh;
+    margin-top: 10px;
+  }
+  .contacto {
+    margin: 30px;
+  }
+  .contacto .formulario {
+    width: 50vh;
+    height: 50vh;
+    margin: 0 auto;
+  }
+  .contacto .formulario label {
+    display: block;
+    margin: 8px 0;
+    font-weight: bold;
+    color: #03fa6e;
+  }
+  .contacto .formulario .inputs-forms {
+    padding: 12px;
+    margin: 8px 0;
+    width: 500px;
+    border: 2px solid #03fa6e;
+    font-size: 16px;
+  }
+  .contacto .formulario .text-contacto {
+    padding: 12px;
+    margin: 8px 0;
+    width: 500px;
+    height: 100px;
+    border: 2px solid #03fa6e;
+    font-size: 16px;
+  }
+  .contacto .formulario .boton-forms {
+    background-color: #03fa6e;
+    color: black;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 500px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .contacto .redes-sociales {
+    margin-top: 15%;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #03fa6e;
+    display: flex;
+    justify-content: start;
+  }
+  .contacto .redes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+  }
+  .contacto .redes .redes-icon {
+    position: relative;
+    width: 45px;
+    bottom: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
