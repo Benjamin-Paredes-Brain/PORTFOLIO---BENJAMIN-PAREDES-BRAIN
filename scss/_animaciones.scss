@@ -1,16 +1,140 @@
 // Animaciones
 
-// logo
-.logo-home {
-  animation: spin 2s;
-}
-
+// giro
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-  
+
+
+// caida - arriba y abajo
+@keyframes caida {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes caida2 {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Entrada- izq y derecha
+@keyframes entrada {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entrada2 {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// aumentar de tamaño
+@keyframes aumentar {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+// sacudida
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+// aparicion
+@keyframes aparicion {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+// APLICADAS
+
+// Home
+.logo-home {
+  animation: spin 1.2s;
+}
+
+.home-txt {
+  animation: caida2 1.2s forwards;
+}
+
+// icono navbar
+.navbar-brand:hover {
+  animation: shake 0.5s;
+}
+
+// titulos - pages
+.titulo {
+  animation: caida 1s forwards;
+}
+
+
+// Habilidades
+.logos-habilidades {
+  animation: entrada 1s forwards;
+}
+
+.texto-habilidades {
+  animation: entrada2 1s forwards;
+}
+
+// Contacto
+.redes-icon:hover {
+  animation: aumentar 0.5s forwards;
+}
+
+.formulario { 
+  animation: caida2 1s forwards;
+}
+
+// Portafolio
+.cont-portafolio {
+  opacity: 0;
+  animation: aparicion 1.5s ease forwards;
+}
+
+// sobre mi
+.descripcion-sobre-mi {
+  animation: caida2 1s forwards;
+}

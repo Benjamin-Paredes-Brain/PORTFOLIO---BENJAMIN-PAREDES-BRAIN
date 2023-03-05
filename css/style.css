@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-.logo-home {
-  animation: spin 2s;
-}
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -17,6 +13,120 @@
     transform: rotate(360deg);
   }
 }
+@keyframes caida {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes caida2 {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entrada {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes entrada2 {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes aumentar {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.logo-home {
+  animation: spin 1.2s;
+}
+
+.home-txt {
+  animation: caida2 1.2s forwards;
+}
+
+.navbar-brand:hover {
+  animation: shake 0.5s;
+}
+
+.titulo {
+  animation: caida 1s forwards;
+}
+
+.logos-habilidades {
+  animation: entrada 1s forwards;
+}
+
+.texto-habilidades {
+  animation: entrada2 1s forwards;
+}
+
+.redes-icon:hover {
+  animation: aumentar 0.5s forwards;
+}
+
+.formulario {
+  animation: caida2 1s forwards;
+}
+
+.cont-portafolio {
+  opacity: 0;
+  animation: aparicion 1.5s ease forwards;
+}
+
+.descripcion-sobre-mi {
+  animation: caida2 1s forwards;
+}
+
 body {
   font-family: "Carrois Gothic", sans-serif;
   overflow-y: auto;
@@ -150,6 +260,8 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   height: 60vh;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20%;
 }
 .habilidades .div-habilidades {
@@ -157,6 +269,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
 }
 .habilidades .div-habilidades .logos-habilidades {
   height: 70px;
@@ -167,6 +280,25 @@ footer {
   margin-top: 10px;
   color: white;
   text-transform: uppercase;
+}
+.habilidades .div-habilidades:hover .descripcion-habilidades {
+  display: block;
+}
+.habilidades .div-habilidades .descripcion-habilidades {
+  display: none;
+  position: absolute;
+  top: -30%;
+  left: 10%;
+  width: clamp(150px, 70%, 200px);
+  max-height: 150px;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgba(3, 250, 110, 0.8);
+  font-size: 16px;
+  color: #03fa6e;
+  line-height: 1.5;
+  z-index: 999;
 }
 
 .contacto {
@@ -299,7 +431,28 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 60vh;
+    justify-content: center;
     margin-top: 10px;
+  }
+  .habilidades .div-habilidades {
+    position: relative;
+  }
+  .habilidades .div-habilidades:hover .descripcion-habilidades {
+    display: block;
+  }
+  .habilidades .div-habilidades .descripcion-habilidades {
+    display: none;
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(3, 250, 110, 0.8);
+    font-size: 16px;
+    color: #03fa6e;
+    line-height: 1.5;
+    z-index: 999;
   }
   .contacto {
     margin: 30px;

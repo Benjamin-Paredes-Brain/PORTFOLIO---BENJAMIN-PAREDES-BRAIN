@@ -159,6 +159,8 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 60vh;
+    justify-content: space-between;
+    align-items: center;
 
     margin-top: 20%;
 
@@ -167,6 +169,7 @@ footer {
         flex-direction: column;
         align-items: center;
         margin-bottom: 20px;
+        position: relative;
 
         .logos-habilidades {
             height: 70px;
@@ -180,6 +183,27 @@ footer {
             color: white;
             text-transform: uppercase;
         }
+
+        &:hover .descripcion-habilidades {
+            display: block;
+          }
+      
+          .descripcion-habilidades {
+            display: none;
+            position: absolute;
+            top: -30%;
+            left: 10%;
+            width: clamp(150px, 70%, 200px);
+            max-height: 150px;
+            overflow-y: scroll;
+            padding: 10px;
+            background-color: $color-secundario;
+            box-shadow: 0 0 10px $shadow-color;
+            font-size: 16px;
+            color: $color-principal;
+            line-height: 1.5;
+            z-index: 999;
+          }
     }
 }
 
@@ -355,8 +379,32 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         height: 60vh;
+        justify-content: center;
 
         margin-top: 10px;
+
+        .div-habilidades {
+            position: relative;
+
+            &:hover .descripcion-habilidades {
+                display: block;
+            }
+
+            .descripcion-habilidades {
+                display: none;
+                position: absolute;
+                top: -30%;
+                left: 0;
+                width: 300px;
+                padding: 20px;
+                background-color: $color-secundario;
+                box-shadow: 0 0 10px $shadow-color;
+                font-size: 16px;
+                color: $color-principal;
+                line-height: 1.5;
+                z-index: 999;
+            }
+        }
     }
 
     //  contacto 
