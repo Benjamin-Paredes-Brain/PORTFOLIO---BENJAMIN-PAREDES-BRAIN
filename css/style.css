@@ -98,6 +98,10 @@
   animation: shake 0.5s;
 }
 
+.navbar-toggler-icon:hover {
+  animation: shake 0.5s;
+}
+
 .titulo {
   animation: caida 1s forwards;
 }
@@ -116,6 +120,14 @@
 
 .formulario {
   animation: caida2 1s forwards;
+}
+
+.redes-icon {
+  animation: caida2 1s forwards;
+}
+
+.redes-sociales {
+  animation: entrada 0.5s forwards;
 }
 
 .cont-portafolio {
