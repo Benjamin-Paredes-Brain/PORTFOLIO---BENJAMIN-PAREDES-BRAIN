@@ -1,5 +1,5 @@
 // Imports
-@import "variables";
+@import "variables-mixins";
 @import "reset-font";
 @import "animaciones";
 
@@ -46,8 +46,7 @@ footer {
 }
 
 .navbar-collapse {
-    width: 100vh;
-    height: 100vh;
+    @include vh100;
 }
 
 .navbar-nav {
@@ -63,8 +62,7 @@ footer {
 }
 
 .nav-link {
-    color: white;
-    text-transform: uppercase;
+    @include mayus-white;
     text-decoration: none;
     font-size: larger;
 }
@@ -84,9 +82,7 @@ footer {
 
 //  home - mobile 
 .home {
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    @include grid-center;
 
     min-height: 85vh;
 
@@ -139,9 +135,7 @@ footer {
 // portafolio - mobile 
 
 .cont-portafolio {
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    @include grid-center;
 
     height: 80vh;
 
@@ -180,15 +174,14 @@ footer {
             font-size: 15px;
             font-weight: bold;
             margin-top: 10px;
-            color: white;
-            text-transform: uppercase;
+            @include mayus-white;
         }
 
         &:hover .descripcion-habilidades {
             display: block;
-          }
-      
-          .descripcion-habilidades {
+        }
+
+        .descripcion-habilidades {
             display: none;
             position: absolute;
             top: -30%;
@@ -203,7 +196,7 @@ footer {
             color: $color-principal;
             line-height: 1.5;
             z-index: 999;
-          }
+        }
     }
 }
 
@@ -324,9 +317,6 @@ footer {
 
     //  home 
     .home {
-        display: grid;
-        justify-content: center;
-        align-items: center;
         grid-template-columns: 40%;
         grid-template-rows: 70%;
 

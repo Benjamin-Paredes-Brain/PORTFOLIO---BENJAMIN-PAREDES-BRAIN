@@ -195,8 +195,8 @@ footer {
 }
 
 .nav-link {
-  color: white;
   text-transform: uppercase;
+  color: white;
   text-decoration: none;
   font-size: larger;
 }
@@ -216,8 +216,8 @@ footer {
 
 .home {
   display: grid;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 85vh;
 }
 .home .logo-home {
@@ -257,8 +257,8 @@ footer {
 
 .cont-portafolio {
   display: grid;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 80vh;
 }
 .cont-portafolio .portafolio-txt {
@@ -290,8 +290,8 @@ footer {
   font-size: 15px;
   font-weight: bold;
   margin-top: 10px;
-  color: white;
   text-transform: uppercase;
+  color: white;
 }
 .habilidades .div-habilidades:hover .descripcion-habilidades {
   display: block;
@@ -402,9 +402,6 @@ footer {
     justify-content: flex-end;
   }
   .home {
-    display: grid;
-    justify-content: center;
-    align-items: center;
     grid-template-columns: 40%;
     grid-template-rows: 70%;
     min-height: 50vh;
