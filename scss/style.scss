@@ -136,16 +136,96 @@ footer {
 
 .cont-portafolio {
     @include grid-center;
-
     height: 80vh;
 
+    .galeria-proyectos {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
 
-    .portafolio-txt {
-        color: $color-principal;
-        font-size: 30px;
-        font-weight: bold;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+
+
+            li {
+                margin: 10px;
+                box-shadow: 0 0 5px $shadow-color;
+                border-radius: 5px;
+                overflow: hidden;
+                width: 300px;
+
+                .proyecto {
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        scale: (2)
+                    }
+
+                    &:hover .descripcion {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .descripcion {
+                        background-color: rgba(0, 0, 0, 0.9);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        color: white;
+                        padding: 10px;
+                        text-align: center;
+                        display: none;
+                        height: 100%;
+
+
+                        h3 {
+                            font-size: 18px;
+                            margin: 10px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            margin: 10px;
+                        }
+
+                        a {
+                            text-decoration: none;
+
+                            .boton-p {
+                                background-color: $shadow-color;
+                                border: none;
+                                border-radius: 10px;
+                                padding: 12px;
+                                text-align: center;
+                                display: inline-block;
+                                font-size: 14px;
+                                margin: 4px;
+                                margin-top: 10px;
+                                cursor: pointer;
+                                text-transform: uppercase;
+                                color: $color-secundario;
+                                font-weight: bolder;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
+
 
 //  habilidades - mobile 
 .habilidades {
@@ -313,6 +393,29 @@ footer {
     .navbar-collapse {
         height: auto;
         justify-content: flex-end;
+    }
+
+    // portafolio
+    .cont-portafolio {
+        .galeria-proyectos {
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+
+                li {
+                    margin: 50px;
+
+                    .proyecto {
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            scale: (2.5);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     //  home 
